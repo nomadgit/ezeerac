@@ -19,7 +19,7 @@
         <td><%= car.location %></td>
         <td><%= car.price %></td>
         <td><%= car.description %></td>
-        <td><%= car.picture %></td>
+        <td><%= image_tag car.picture_url(:thumb) if car.picture? %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -22,7 +22,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @car.picture %>
+  <%= image_tag(@car.picture_url, :width => 600) if @car.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+root :to => redirect('/pages/about')
   resources :cars
 
   get 'pages/about'
